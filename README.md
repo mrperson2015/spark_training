@@ -12,11 +12,15 @@ perfect.
 
 While this project is specifically designed for PySpark jobs, many of these principals can be applied to any ETL job.
 
+---
+
 ## Contact
 
 If you have any questions, comments, concerns or suggestions, please contact the team or your manager. Any PySpark
 developer should have the knowledge to help understand the content contained. This was originally written by 📷-Cameron
 Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
+
+---
 
 ## Topics Covered
 
@@ -41,6 +45,8 @@ clear out previous failed runs
 ### Single Execution
 
 single execution framework
+
+---
 
 ## Modules
 
@@ -72,8 +78,12 @@ job are:
 
 ### single_execution_job
 
+---
+
 ## Setup and Testing
 
 ### Pycharm Setup
+
+---
 
 ## Related Docs
