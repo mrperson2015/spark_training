@@ -1,3 +1,8 @@
+`project root ◄`<br>
+`├── base_spark_job`<br>
+`├── audit_spark_job`<br>
+`└── unit_test_spark_job`<br>
+
 # Spark Training Project
 
 [[_TOC_]]
@@ -30,6 +35,8 @@ by 📷-Cameron Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
 ## Topics Covered
 
 ### Audits
+
+[./audit_spark_job/README.md](README.md)
 
 Audits run with every job to verify all data is accounted for with no record or data loss. While audits cant guarantee
 that the job is bug free. It can show that no data loss has occurred. These can be categorized into two
