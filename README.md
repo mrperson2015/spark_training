@@ -74,8 +74,6 @@ job are:
 
 ## Setup and Testing
 
-Setup guide on how to execute the job via Pycharm.
-
 ### Pycharm Setup
 
 ## Related Docs
