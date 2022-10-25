@@ -1,7 +1,10 @@
 `project root ◄`<br>
 `├── base_spark_job`<br>
 `├── audit_spark_job`<br>
-`└── unit_test_spark_job`<br>
+`├── logging_spark_job`<br>
+`├── unit_test_spark_job`<br>
+`├── self_head_spark_job`<br>
+`└── single_execution_spark_job`<br>
 
 # Spark Training Project
 
@@ -36,7 +39,7 @@ by 📷-Cameron Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
 
 ### Audits
 
-[audit_spark_job/README.md](README.md)
+[Audit Module Details](audit_spark_job/README.md)
 
 Audits run with every job to verify all data is accounted for with no record or data loss. While audits cant guarantee
 that the job is bug free. It can show that no data loss has occurred. These can be categorized into two
@@ -47,14 +50,22 @@ distinct buckets:
 
 ### Logging
 
+[Logging Module Details](logging_spark_job/README.md)
+
 ### Unit Tests
 
+[Unit Tests Module Details](unit_test_spark_job/README.md)
+
 ### Self-healing / Restartable
+
+[Self Healing Module Details](self_heal_spark_job/README.md)
 
 read the records from the source that has changed since the last execution
 clear out previous failed runs
 
 ### Single Execution
+
+[Single Execution Module Details](single_execution_spark_job/README.md)
 
 single execution framework
 
@@ -82,13 +93,23 @@ job are:
 
 ### audits_job
 
+[Audit Module Details](audit_spark_job/README.md)
+
 ### logging_job
+
+[Logging Module Details](logging_spark_job/README.md)
 
 ### unit_tests_job
 
+[Unit Tests Module Details](unit_test_spark_job/README.md)
+
 ### self_healing_job
 
+[Self Healing Module Details](self_heal_spark_job/README.md)
+
 ### single_execution_job
+
+[Single Execution Module Details](single_execution_spark_job/README.md)
 
 ---
 
