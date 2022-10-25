@@ -31,6 +31,7 @@ if __name__ == '__main__':
     # MISTAKES
     #  - Round percent_of_total makes the total potentially greater or lesser than 1 (ie 1.01)
     #  - Filtering out the no_change records causes the percent_of_total to be <= 1
+    #  - Filtering doesn't handle the dirty record_change_type data of nochange and NULL
     #  - Unable to troubleshoot job execution for job failure or data quality issues
 
     job_start_time = datetime.datetime.now()
