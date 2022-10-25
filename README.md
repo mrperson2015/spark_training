@@ -4,21 +4,21 @@
 
 ## Purpose
 
-This is the top-level directory for PySpark training. This is to help onboard new hires on what we expect all PySpark
-jobs to be written. This also help existing developers to learn the same. This project is intended to be a living
-document. Any questions, comments, or concerns are expected to be raised to the team and or your manager. While every
-effort has been made to make this project meet all development guidelines and be 100% accurate, I won't pretend it is
-perfect.
+This is the top-level directory for PySpark Training. This is to help new hires understand expectations for all PySpark
+jobs. This is also intended for current developers to learn the same. This project is a living document and will
+continue to be supported and enhanced. While every effort has been made to make this project meet all development
+guidelines and be 100% accurate, I won't pretend it is perfect. Any questions, comments, or concerns are expected
+to be raised to the team and/or your manager.
 
-While this project is specifically designed for PySpark jobs, many of these principals can be applied to any ETL job.
+While this project is specifically designed for PySpark jobs, many of these principals should be applied to any ETL job.
 
 ---
 
 ## Contact
 
 If you have any questions, comments, concerns or suggestions, please contact the team or your manager. Any PySpark
-developer should have the knowledge to help understand the content contained. This was originally written by 📷-Cameron
-Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
+developer should have the knowledge to help understand the content contained here in. This was originally written
+by 📷-Cameron Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
 
 ---
 
@@ -26,9 +26,9 @@ Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
 
 ### Audits
 
-Audits run with every job to verify all data is accounted for with no record or
-data loss. While audits cant guarantee that the job is bug free. It can show that no data loss has occured. These can be
-categorized into two distinct buckets:
+Audits run with every job to verify all data is accounted for with no record or data loss. While audits cant guarantee
+that the job is bug free. It can show that no data loss has occurred. These can be categorized into two
+distinct buckets:
 
 1. _Basic_: steps that can be applied to any job
 2. _Specific_: steps that are designed specifically to the current job and its data
