@@ -12,9 +12,9 @@
 
 ## Purpose
 
-This is the top-level directory for PySpark Training. This is to help new hires understand expectations for all PySpark
-jobs. This is also intended for current developers to learn the same. This project is a living document and will
-continue to be supported and enhanced.
+This is the top-level directory for PySpark Training. This is to help new hires and current developers alike to
+understand expectations for all PySpark jobs. This project is a living document and will continue to be supported
+and enhanced.
 
 While this project is specifically designed for PySpark jobs, many of these principals should be applied to any ETL job.
 
@@ -41,8 +41,8 @@ by 📷-Cameron Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
 
 [Audit Module Details](audit_spark_job/README.md)
 
-Audits run with every job to verify all data is accounted for with no record or data loss. While audits cant guarantee
-that the job is bug free. It can show that no data loss has occurred. These can be categorized into two
+Audits run with every job to verify all data is accounted for with no record or data loss. While audits can't guarantee
+that the job is bug free; it can show that no data loss has occurred. These can be categorized into two
 distinct buckets:
 
 1. _Basic_: steps that can be applied to any job
@@ -52,13 +52,26 @@ distinct buckets:
 
 [Logging Module Details](logging_spark_job/README.md)
 
+Logging is a part of each job. Instead of using print statements, logging should be used. It also allows the messages
+to be included in normal code reporting systems. eg. Kibana, Graphana, etc.
+
+By using logging, you can troubleshoot the job execution in root cause analysis.
+
 ### Unit Tests
 
 [Unit Tests Module Details](unit_test_spark_job/README.md)
 
+Unit tests allows tests to be completed against specific snippets of code. Verifying that specific pieces of code
+is behaving as intended. These run at development and during CI/CD activities.
+
+Failed unit tests will block deployments to the different environments.
+
 ### Self-healing / Restartable
 
 [Self Healing Module Details](self_heal_spark_job/README.md)
+
+Self-healing or restart-ability is the idea that when a job failes, you are able to restart the job without manual
+intervention. Subsequent jobs will handle the data or job artifacts left over from the previous execution. 
 
 read the records from the source that has changed since the last execution
 clear out previous failed runs
@@ -67,7 +80,9 @@ clear out previous failed runs
 
 [Single Execution Module Details](single_execution_spark_job/README.md)
 
-single execution framework
+Single execution framework manages subsequent jobs to be skipped or delayed if the job doesn't allow for multiple
+instances ot overlap. Ideally, you would build your jobs in a way that allows for multiple executions as this is easier
+to code.
 
 ---
 
