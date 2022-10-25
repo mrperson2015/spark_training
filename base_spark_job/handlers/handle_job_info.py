@@ -32,7 +32,7 @@ def job_diagram() -> None:
         "          │          ╚══════╦══════╝                                                                        \n"
         "          │     ╔══════╦════╩═══╦════════╗                                                                  \n"
         "          │ ┌───╨──┐┌──╨───┐┌───╨──┐┌────╨────┐                                                             \n"
-        "          │ │delete││update││insert││no change│                                                             \n"
+        "          │ │delete││update││insert││no_change│                                                             \n"
         "TRANSFORM─┤ └───╥──┘└───╥──┘└───╥──┘└─────────┘                                                             \n"
         "          │     ║ ╔═════╩═════╗ ║                                                                           \n"
         "          │     ║ ║ UPPERCASE ║ ║                                                                           \n"
