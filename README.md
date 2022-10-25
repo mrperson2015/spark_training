@@ -6,11 +6,16 @@
 
 This is the top-level directory for PySpark Training. This is to help new hires understand expectations for all PySpark
 jobs. This is also intended for current developers to learn the same. This project is a living document and will
-continue to be supported and enhanced. While every effort has been made to make this project meet all development
-guidelines and be 100% accurate, I won't pretend it is perfect. Any questions, comments, or concerns are expected
-to be raised to the team and/or your manager.
+continue to be supported and enhanced.
 
 While this project is specifically designed for PySpark jobs, many of these principals should be applied to any ETL job.
+
+---
+
+## How You Can Help
+
+While every effort has been made to make this project meet all development guidelines and be 100% accurate, I won't
+pretend it is perfect. Any questions, comments, or concerns are expected to be raised to the team and/or your manager.
 
 ---
 
