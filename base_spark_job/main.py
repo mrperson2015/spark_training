@@ -9,7 +9,7 @@ from helper_spark import get_spark
 from base_spark_job.handlers.handle_job_info import job_diagram
 from base_spark_job.handlers.handle_run_info import job_pre_run_info, job_post_run_info
 from base_spark_job.handlers.handle_input_data import job_extract_phase
-from base_spark_job.handlers.handle_transaction_data import job_transform_phase
+from base_spark_job.handlers.handle_transform_data import job_transform_phase
 from base_spark_job.handlers.handle_output_data import job_load_phase
 
 if __name__ == '__main__':
@@ -27,12 +27,6 @@ if __name__ == '__main__':
         "│                                   │[■] No Job Errors                  \n"
         "¹ except accepted standard warnings. ie 'Setting default log level to \"WARN\".'"
     )
-
-    # MISTAKES
-    #  - Round percent_of_total makes the total potentially greater or lesser than 1 (ie 1.01)
-    #  - Filtering out the no_change records causes the percent_of_total to be <= 1
-    #  - Filtering doesn't handle the dirty record_change_type data of nochange and NULL
-    #  - Unable to troubleshoot job execution for job failure or data quality issues
 
     job_start_time = datetime.datetime.now()
     job_diagram()
