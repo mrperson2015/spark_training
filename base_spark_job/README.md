@@ -1,119 +1,107 @@
-`project root`<br>
-`├── base_spark_job ◄`<br>
-`├── audit_spark_job`<br>
-`├── logging_spark_job`<br>
-`├── unit_test_spark_job`<br>
-`├── self_head_spark_job`<br>
-`└── single_execution_spark_job`<br>
+```shell
+project root
+├── base_spark_job ◄
+├── audit_spark_job
+├── logging_spark_job
+├── unit_test_spark_job
+├── self_head_spark_job
+└── single_execution_spark_job
+```
+
+# Base Spark Job
 
 [[_TOC_]]
 
-# Spark Training Project
-
 ## Purpose
 
-## Base Spark Job
+This job (base_spark_job) is the base code that all others start with. It is a simple job that meets very little
+requirements. It runs and runs without any execution errors. The other jobs use this base PySpark job with the added
+topic code added.
 
-# Topics
+You will want to run and understand this base spark job code well before jumping into the other jobs. This will help
+you to understand the specific code and purpose of each topic.
 
-### Architecture
+---
 
-* [ ] KISS
-    * Keep It Stupid Simple
-* [ ] Peer Review
-* [ ] Documentation
-    * [ ] Lucid Chart
-    * [ ] Wiki
+## Job
 
-### PLANNING
+### Requirements
 
-* [ ] User Stories
-* [ ] Tasks Have Time Estimates
-* [ ] Peer Review
-* [ ] ¹Delivery Date
-    * ¹ (`estimated start date` + `total estimated task time`) * π
+1. Uppercase string values for updated records
+2. Calculate Percent of Total for each record where record change is new, update, or delete
+3. Exclude no_change record types from the output
 
-### IMPLEMENTATION
+### Steps
 
-* [ ] Documentation
-    * [ ] README.md
-    * [ ] Docstrings
-    * [ ] Code
-    * [ ] Handlers
-* [ ] No ide Warnings
-* [ ] No ide Errors
-* [ ] ²No Job Warnings
-    * ² except accepted standard warnings
-    * ie: 'Setting default log level to \"WARN\".'
-* [ ] No Job Errors
-* [ ] Peer Review
-* [ ] Audits
-    * [ ] Minimum
-    * [ ] Job Specific
-* [ ] Logging
-* [ ] Unit Tests
-* [ ] Change Log
-* [ ] Copyright
+- EXTRACT PHASE
+    1. Read Data From Source
+- TRANSFORM PHASE
+    1. Determine Record Change Type
+    2. Calculate Grant Total For Amount
+    3. Process Data Based On Change Type & Calculate Percent Of Total
+- LOAD PHASE
+    1. Write Data
 
-| → Architecture    | Planning                        | Implementation       |
-|-------------------|---------------------------------|----------------------|
-| [■] KISS          | [ ] User Storie(s)              | [■] Documentation    |
-| [ ] Peer Review   | [ ] Task(s) Have Time Estimates | [ ] - README.md      |
-| [ ] Documentation | [ ] Peer Review                 | [■] - Docstrings     |
-| [ ] Lucid Chart   | [ ] ¹Delivery Date              | [■] - Code           |
-| [ ] Wiki          | [ ] Test Plan                   | [■] - Handlers       |
-|                   | [ ] Deploy Plan                 | [■] No IDE Warnings  |
-|                   | [ ] Support Plan                | [■] No IDE Errors    |
-|                   | [ ]                             | [■] ²No Job Warnings |
-|                   | [ ]                             | [■] No Job Errors    |
-|                   | [ ]                             | [ ] Peer Review      |
-|                   | [ ]                             | [ ] Audits           |
-|                   | [ ]                             | [ ] - Minimum        |
-|                   | [ ]                             | [ ] - Job Specific   |
-|                   | [ ]                             | [ ] Logging          |
-|                   | [ ]                             | [ ] Unit Tests       |
-|                   | [ ]                             | [ ] Change Log       |
-|                   |                                 | [ ] Copyright        |
-|                   |                                 | [ ] Black Formatter  |
+### Data Flow Diagram
 
-¹ `estimated start date` + (`total estimated task time` * π)
+```shell
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║  1 BASIC JOB                                                                                                 ║
+║                                                                                                              ║
+║           ┌             ┌──────┐                                                                             ║
+║           │             │source│                                                                             ║
+║ EXTRACT───┤             └──╥───┘                                                                             ║
+║           │            ╔═══╩════╗                                                                            ║
+║           │            ║  READ  ║                                                                            ║
+║           └            ╚═══╦════╝                                                                            ║
+║           ┌          ╔═════╩═══════╗                                                                         ║
+║           │          ║ CHANGE TYPE ║                                                                         ║
+║           │          ╚══════╦══════╝                                                                         ║
+║           │     ╔══════╦════╩═══╦════════╗                                                                   ║
+║           │ ┌───╨──┐┌──╨───┐┌───╨──┐┌────╨────┐                                                              ║
+║           │ │delete││update││insert││no_change│                                                              ║
+║ TRANSFORM─┤ └───╥──┘└───╥──┘└───╥──┘└─────────┘                                                              ║
+║           │     ║ ╔═════╩═════╗ ║                                                                            ║
+║           │     ║ ║ UPPERCASE ║ ║                                                                            ║
+║           │     ║ ║  STRINGS  ║ ║                                                                            ║
+║           │     ║ ╚═════╦═════╝ ║                                                                            ║
+║           │     ╚═══════╩═══╦═══╝                                                                            ║
+║           │            ╔════╩═════╗                                                                          ║
+║           │            ║ PERCENT  ║                                                                          ║
+║           │            ║ OF TOTAL ║                                                                          ║
+║           └            ╚════╦═════╝                                                                          ║
+║           ┌             ╔═══╩═══╗                                                                            ║
+║           │             ║ WRITE ║                                                                            ║
+║ LOAD──────┤             ╚═══╦═══╝                                                                            ║
+║           │           ┌─────╨─────┐                                                                          ║
+║           │           │destination│                                                                          ║
+║           └           └───────────┘                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║  LEGEND                                        DATA╗     ┌─────┐ ┐─────┌ ┼─────┼ ╔════════╗ ╗═════╔ ╬═════╬  ║
+║                                                ╔═══╬══╦═ │state│ │AUDIT│ │     │ ║ ACTION ║ ║     ║ ║     ║  ║
+║                                                    FLOW  └─────┘ ┘─────└ ┼─────┼ ╚════════╝ ╝═════╚ ╬═════╬  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+```
 
-² except accepted standard warnings. (ie 'Setting default log level to "WARN".')
+### Related Docs
 
-# Modules
+[Console Job Output](CONSOLE.md)
+[Job Mistakes](MISTAKES.md)
 
-## base_spark_job
+---
 
-##   
+## How You Can Help
 
-# Setup and Testing
+While every effort has been made to make this project meet all development guidelines and be 100% accurate, I won't
+pretend it is perfect. Any questions, comments, or concerns are expected to be raised to the team and/or your manager.
 
-Quick setup guide on how to execute the Job via Pycharm or through a Spark Submit
-command.
+---
 
-## Pycharm Setup
+## Contact
 
-Before continuing make sure you have set up Pycharm for Data Pipeline Development. Follow [this wiki
-here](https://berkadiadevops.visualstudio.com/Polaris/_wiki/wikis/Polaris.wiki/6759/Setting-Up-Pycharm-for-Data-Pipeline-Development)
-if you haven't \
+If you have any questions, comments, concerns or suggestions, please contact the team or your manager. Any PySpark
+developer should have the knowledge to help understand the content contained here in. This was originally written
+by 📷-Cameron Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
 
-1. Open your Run/Debug Configuration that you will be using
-2. Set the value for Script Path to point to the main.py module, this is our entrypoint to the
-   Job.  \
-   `<path to project>/data-pipeline-databridge-import-dms/src/jobs/import_dms_document_data/main.py`
-3. Set the value for Parameters, depending on what you are testing this value will vary. See
-   [Parameter Arguments](#parameter-arguments) for options. For debugging my parameters will look
-   something like \
-   `--Env Dev --Local True` \
-   This loads the local <ssm_param>.example.json which allows for quick cycles when making edits to an
-   SSM Param. When testing the AWS SSM Param you would just change your parameters to look like \
-   `--Env Dev -SSMParameterName <name of ssm parameter>`
-4. Select your Python Interpreter from the dropdown
-5. Set the value for Working directory, this is the root of your project and will look something
-   similar to \
-   `<path to project>/<data-pipeline-databridge-import-dms>`
-
-# Related Docs
-
-[Import DMS Document Data FSD](https://lucid.app/lucidchart/77185a06-1e34-4151-b490-b68678f3214e/edit?invitationId=inv_bded16c3-287c-4dbe-bf7d-597ab43e7bfa&page=0_0#) \
-[Imports DMS Document Data Repo](https://dev.azure.com/berkadiadevops/Polaris/_git/data-pipeline-databridge-import-dms)
+---
