@@ -86,7 +86,7 @@ Failed unit tests will block deployments to the different environments.
 
 [Self Healing Job Details](self_heal_spark_job/README.md)
 
-Self-healing or restart-ability is the idea that when a job failes, you are able to restart the job without manual
+Self-healing or restart-ability is the idea that when a job fails, you are able to restart the job without manual
 intervention. Subsequent jobs will handle the data or job artifacts left over from the previous execution.
 
 read the records from the source that has changed since the last execution
