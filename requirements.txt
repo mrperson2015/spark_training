@@ -1,0 +1,5 @@
+pyspark~=3.0.2
+py4j~=0.10.9.5
+setuptools~=60.2.0
+randomCoordinates~=0.1.7
+Faker~=15.1.1
