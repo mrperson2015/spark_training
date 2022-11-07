@@ -35,6 +35,9 @@ by 📷-Cameron Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
 
 ---
 
+## Setup
+Setup instructions have been moved to another markdown file. You can find it here [SETUP.md](./SETUP.md)
+
 ## Topics Covered
 
 This training project is designed with a base PySpark job. It is a simple job that meets very little requirements. It
