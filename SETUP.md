@@ -1,14 +1,14 @@
 # Tested Versions
 
-| Key               | Value               |
-|-------------------|---------------------|
-| OS                | Win 10, Win 11      |
-| IDE               | PyCharm 2022.1      |
-| Python            | 3.10                |
-| JDK               | openJDK 1.8.0-262   |
-| PySpark           | 3.0.2, 3.0.3, 3.2.2 |
-| randomCoordinates | 0.1.7               |
-| Faker             | 15.1.1              |
+| Key               | Value                        |
+|-------------------|------------------------------|
+| OS                | Win 10, Win 11, Ubuntu 20.04 |
+| IDE               | PyCharm 2022.1, 2022.2       |
+| Python            | 3.8, 3.10                    |
+| JDK               | openJDK 1.8.0-262            |
+| PySpark           | 3.0.2, 3.0.3, 3.2.2          |
+| randomCoordinates | 0.1.7                        |
+| Faker             | 15.1.1, 15.1.2               |
 
 ```shell
 C:\source>java -version
@@ -69,7 +69,26 @@ C:\source>cd spark_training
 3. Install Dependencies<br>
    See versions above if you want to follow the same versions used during development
 
-    1. training_utils
-    2. PyCharm
+    1. `training_utils`
+    2. PySpark
     3. randomCoordinates
     4. Faker
+
+## Ubuntu
+
+1. Install Ubuntu 22.04
+2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+    1. Install PyCharm 2022.2 (latest) via toolbox
+3. Install Pip
+   - `sudo apt install python3-pip`
+4. Install JDK 8 
+   - `sudo apt install openjdk-8-jre-headless`
+5. Clone `training_utils`
+   - `git clone https://github.com/mrperson2015/training_utils.git`
+6. Clone `spark_training`
+   - `git clone https://github.com/mrperson2015/spark_training.git`
+7. Open `spark_training` project
+   1. Setup interpreter
+   2. add user interpreter to `training_utils`
+   3. install required packages
+   4. run `base_spark_job/main.py`
