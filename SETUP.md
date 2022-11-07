@@ -60,12 +60,14 @@ C:\source>cd spark_training
 
 ## Setup
 
+### Windows
+
 1. Open project `spark_training` in PyCharm<br>
-   [<img src="./assets/setup/open_job.png" width="300" />](./assets/setup/open_job.png)
+   [<img src="./assets/setup/win/open_job.png" width="300" />](./assets/setup/win/open_job.png)
 2. Setup `venv`
     1. Include user added interpreter to the
        project [training_utils](https://github.com/mrperson2015/training_utils)<br>
-       [<img src="./assets/setup/setup_venv.png" width="300" />](./assets/setup/setup_venv.png)
+       [<img src="./assets/setup/win/setup_venv.png" width="300" />](./assets/setup/win/setup_venv.png)
 3. Install Dependencies<br>
    See versions above if you want to follow the same versions used during development
 
@@ -74,27 +76,28 @@ C:\source>cd spark_training
     3. randomCoordinates
     4. Faker
 
-## Ubuntu
+### Ubuntu
+These steps where completed in a virtual machine using VMWare
 
 1. Install Ubuntu 22.04
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
     1. Install PyCharm 2022.2 (latest) via toolbox
 3. Install Git
-   - `sudo apt install git`
+    - `sudo apt install git`
 4. Install Pip
-   - `sudo apt install python3-pip`
-5. Install JDK 8 
-   - `sudo apt install openjdk-8-jre-headless`
+    - `sudo apt install python3-pip`
+5. Install JDK 8
+    - `sudo apt install openjdk-8-jre-headless`
 6. Clone `training_utils`
-   - `git clone https://github.com/mrperson2015/training_utils.git`
+    - `git clone https://github.com/mrperson2015/training_utils.git`
 7. Clone `spark_training`
-   - `git clone https://github.com/mrperson2015/spark_training.git`
+    - `git clone https://github.com/mrperson2015/spark_training.git`
 8. Open `spark_training` project<br>
    [<img src="./assets/setup/ubuntu/base_spark_job_main.png" width="300" />](./assets/setup/ubuntu/base_spark_job_main.png)
-   1. Setup interpreter
-   2. add user interpreter to `training_utils`<br>
-   [<img src="./assets/setup/ubuntu/setup_interpreter.png" width="300" />](./assets/setup/ubuntu/setup_interpreter.png)
-   3. install required packages<br>
-   [<img src="./assets/setup/ubuntu/package_requirements.png" width="300" />](./assets/setup/ubuntu/package_requirements.png)
-   4. run `base_spark_job/main.py`<br>
-   [<img src="./assets/setup/ubuntu/job_complete.png" width="300" />](./assets/setup/ubuntu/job_complete.png)
+    1. Setup interpreter
+    2. add user interpreter to `training_utils`<br>
+       [<img src="./assets/setup/ubuntu/setup_interpreter.png" width="300" />](./assets/setup/ubuntu/setup_interpreter.png)
+    3. install required packages<br>
+       [<img src="./assets/setup/ubuntu/package_requirements.png" width="300" />](./assets/setup/ubuntu/package_requirements.png)
+    4. run `base_spark_job/main.py`<br>
+       [<img src="./assets/setup/ubuntu/job_complete.png" width="300" />](./assets/setup/ubuntu/job_complete.png)
