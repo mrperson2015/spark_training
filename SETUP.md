@@ -79,16 +79,22 @@ C:\source>cd spark_training
 1. Install Ubuntu 22.04
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
     1. Install PyCharm 2022.2 (latest) via toolbox
-3. Install Pip
+3. Install Git
+   - `sudo apt install git`
+4. Install Pip
    - `sudo apt install python3-pip`
-4. Install JDK 8 
+5. Install JDK 8 
    - `sudo apt install openjdk-8-jre-headless`
-5. Clone `training_utils`
+6. Clone `training_utils`
    - `git clone https://github.com/mrperson2015/training_utils.git`
-6. Clone `spark_training`
+7. Clone `spark_training`
    - `git clone https://github.com/mrperson2015/spark_training.git`
-7. Open `spark_training` project
+8. Open `spark_training` project<br>
+   [<img src="./assets/setup/ubuntu/base_spark_job_main.png" width="300" />](./assets/setup/ubuntu/base_spark_job_main.png)
    1. Setup interpreter
-   2. add user interpreter to `training_utils`
-   3. install required packages
-   4. run `base_spark_job/main.py`
+   2. add user interpreter to `training_utils`<br>
+   [<img src="./assets/setup/ubuntu/setup_interpreter.png" width="300" />](./assets/setup/ubuntu/setup_interpreter.png)
+   3. install required packages<br>
+   [<img src="./assets/setup/ubuntu/package_requirements.png" width="300" />](./assets/setup/ubuntu/package_requirements.png)
+   4. run `base_spark_job/main.py`<br>
+   [<img src="./assets/setup/ubuntu/job_complete.png" width="300" />](./assets/setup/ubuntu/job_complete.png)
