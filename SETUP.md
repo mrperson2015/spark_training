@@ -37,6 +37,8 @@ General steps follow this pattern:
 
 ## Windows
 
+<details><summary>Instructions for Windows</summary>
+
 1. Install Windows 11
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
     1. Install [PyCharm](https://www.jetbrains.com/pycharm/) 2022.2 via toolbox<br>
@@ -83,7 +85,11 @@ General steps follow this pattern:
     4. Run `base_spark_job/main.py`<br>
        [<img src="./assets/setup/win/job_complete.png" width="300" />](./assets/setup/win/job_complete.png)
 
+</details>
+
 ## Ubuntu
+
+<details><summary>Instructions for Ubuntu</summary>
 
 1. Install [Ubuntu](https://ubuntu.com/) 20.04.5 LTS
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
@@ -107,3 +113,5 @@ General steps follow this pattern:
        [<img src="./assets/setup/ubuntu/package_requirements.png" width="300" />](./assets/setup/ubuntu/package_requirements.png)
     4. Run `base_spark_job/main.py`<br>
        [<img src="./assets/setup/ubuntu/job_complete.png" width="300" />](./assets/setup/ubuntu/job_complete.png)
+
+</details>
