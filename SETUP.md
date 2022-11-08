@@ -34,6 +34,7 @@ General steps follow this pattern:
 1. Install Windows 11
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
     1. Install PyCharm 2022.2 (latest) via toolbox
+       [<img src="./assets/setup/win/jetbrains_toolkit.png" width="300" />](./assets/setup/win/jetbrains_toolkit.png)
 3. Install Git
     - [Git Downloads](https://git-scm.com/downloads)
 4. Install Python 3
@@ -61,11 +62,11 @@ General steps follow this pattern:
     - `git clone https://github.com/mrperson2015/training_utils.git`
 10. Clone `spark_training`
     - `git clone https://github.com/mrperson2015/spark_training.git`
-11. Open project `spark_training` in PyCharm<br>
-    [<img src="./assets/setup/win/open_job.png" width="300" />](./assets/setup/win/open_job.png)
+11. Open project `spark_training` in PyCharm
+    [<img src="./assets/setup/win/pycharm_open.png" width="300" />](./assets/setup/win/pycharm_open.png)
     1. Setup Interpreter
     2. Add user interpreter `training_utils`
-       [training_utils](https://github.com/mrperson2015/training_utils)<br>
+       [training_utils](https://github.com/mrperson2015/training_utils)
        [<img src="./assets/setup/win/setup_venv.png" width="300" />](./assets/setup/win/setup_venv.png)
     3. Install required packages
     4. Run `base_spark_job/main.py`
@@ -85,12 +86,12 @@ General steps follow this pattern:
     - `git clone https://github.com/mrperson2015/training_utils.git`
 7. Clone `spark_training`
     - `git clone https://github.com/mrperson2015/spark_training.git`
-8. Open project `spark_training` in PyCharm<br>
+8. Open project `spark_training` in PyCharm
    [<img src="./assets/setup/ubuntu/base_spark_job_main.png" width="300" />](./assets/setup/ubuntu/base_spark_job_main.png)
     1. Setup interpreter
-    2. Add user interpreter to `training_utils`<br>
+    2. Add user interpreter to `training_utils`
        [<img src="./assets/setup/ubuntu/setup_interpreter.png" width="300" />](./assets/setup/ubuntu/setup_interpreter.png)
-    3. Install required packages<br>
+    3. Install required packages
        [<img src="./assets/setup/ubuntu/package_requirements.png" width="300" />](./assets/setup/ubuntu/package_requirements.png)
-    4. Run `base_spark_job/main.py`<br>
+    4. Run `base_spark_job/main.py`
        [<img src="./assets/setup/ubuntu/job_complete.png" width="300" />](./assets/setup/ubuntu/job_complete.png)
