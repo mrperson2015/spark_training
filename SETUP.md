@@ -20,14 +20,14 @@ The steps below were generated from new a new virtual machine for Windows 11 and
 General steps follow this pattern:
 
 1. Install OS ([Windows](#Windows), [Ubuntu](#Ubuntu))
-2. Install JetBrains PyCharm - The IDE to run the code in
-3. Install Git - The version control tool of choice
-4. Install Python 3 - The language the PySpark jobs are written in
-5. Install JDK - The engine that Spark runs in
+2. Install [JetBrains PyCharm](https://www.jetbrains.com/pycharm/) - The IDE to run the code in
+3. Install [Git](https://git-scm.com/) - The version control tool of choice
+4. Install [Python](https://www.python.org/) 3 - The language the PySpark jobs are written in
+5. Install [JDK](https://www.oracle.com/java/) - The engine that Spark runs in
 6. Install OS specific items
 7. Clone repositories for `training_utils` and `spark_training` - The two projects used in this PySpark training project
 8. Open and configure `spark_training` job in PyCharm - Setup PyCharm with the required Python packages
-9. Run PySpark job
+9. Run [PySpark](https://spark.apache.org/) job
 
 ## Windows
 
