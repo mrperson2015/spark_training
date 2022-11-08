@@ -10,6 +10,14 @@
 
 [[_TOC_]]
 
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
 ## Purpose
 
 This is the top-level directory for PySpark Training. This is to help new hires and current developers alike to
