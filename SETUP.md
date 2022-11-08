@@ -52,13 +52,15 @@ General steps follow this pattern:
     - Add `%HADOOP_HOME%\bin` to `PATH`
 7. Install hadoop.dll
 
-   - [ ] Verify if needed - I have never had to do this in my other installs. Maybe this is because I usually install PySpark locally instead
-   of using pip.
+    - [ ] Verify if needed - I have never had to do this in my other installs. Maybe this is because I usually install
+      PySpark locally instead
+      of using pip.
     - [WinUtils](https://github.com/cdarlint/winutils)
     - Copy `hadoop.dll`, from the same location as `winutils.exe`, to `C:\Windows\System32\ `
 8. Install Visual C++
 
-    - [ ] Verify if needed - I am not sure if this is needed. I ran into write parquet errors and this was one suggested fix.
+    - [ ] Verify if needed - I am not sure if this is needed. I ran into write parquet errors and this was one suggested
+      fix.
     - x86 & x64 [Microsoft Visual C++](https://www.microsoft.com/en-au/download/details.aspx?id=26999)
 10. Clone `training_utils`
     - `git clone https://github.com/mrperson2015/training_utils.git`
