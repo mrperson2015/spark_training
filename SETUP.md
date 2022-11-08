@@ -1,14 +1,14 @@
 # Tested Versions
 
-| Key               | Value                             |
-|-------------------|-----------------------------------|
-| OS                | Win 10, Win 11, Ubuntu 20.04      |
-| IDE               | PyCharm 2022.1, 2022.2            |
-| Python            | 3.8, 3.10                         |
-| JDK               | openJDK 1.8.0-262, Java 1.8.0_351 |
-| PySpark           | 3.0.2, 3.0.3, 3.2.2               |
-| randomCoordinates | 0.1.7                             |
-| Faker             | 15.1.1, 15.1.2                    |
+| Key               | Value                                        |
+|-------------------|----------------------------------------------|
+| OS                | Win 10, Win 11, Ubuntu 20.04, Ubuntu 22.04.1 |
+| IDE               | PyCharm 2022.1, 2022.2                       |
+| Python            | 3.8, 3.10                                    |
+| JDK               | openJDK 1.8.0-262, Java 1.8.0_351            |
+| PySpark           | 3.0.2, 3.0.3, 3.2.2                          |
+| randomCoordinates | 0.1.7                                        |
+| Faker             | 15.1.1, 15.1.2                               |
 
 # Assumptions
 
@@ -40,6 +40,7 @@ General steps follow this pattern:
 <details><summary>Instructions for Windows</summary>
 
 1. Install Windows 11
+    1. [Enable TPM](https://pureinfotech.com/enable-tpm-secure-boot-vmware-install-windows-11/)
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
     1. Install [PyCharm](https://www.jetbrains.com/pycharm/) 2022.2 via toolbox<br>
        [<img src="./assets/setup/win/jetbrains_toolkit.png" width="300" />](./assets/setup/win/jetbrains_toolkit.png)
@@ -91,27 +92,37 @@ General steps follow this pattern:
 
 <details><summary>Instructions for Ubuntu</summary>
 
-1. Install [Ubuntu](https://ubuntu.com/) 20.04.5 LTS
-2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
-    1. Install [PyCharm](https://www.jetbrains.com/pycharm/) 2022.2 via toolbox
-3. Install [Git](https://git-scm.com/)
+1. Install [Ubuntu](https://ubuntu.com/)
+    - 20.04.3 LTS Version
+    - 8 GB Memory
+    - 2 Processor @ 4 Cores each (8 total processor cores)
+    - 20 GB NVMe disk (split, unallocated)
+    - NAT Network Adapter
+2. Upgrade & Update Ubuntu
+   - `sudo apt update`
+   - `sudo apt upgrade`
+3. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+4. Install [PyCharm](https://www.jetbrains.com/pycharm/) via JetBrains Toolbox
+    - 2022.2 Version
+5. Install [Git](https://git-scm.com/)
     - `sudo apt install git`
-4. Install [Pip](https://pip.pypa.io/en/stable/)
+6. Install [Pip](https://pip.pypa.io/en/stable/)
     - `sudo apt install python3-pip`
-5. Install [JDK](https://www.oracle.com/java/) 8
+7. Install [JDK](https://www.oracle.com/java/)
     - `sudo apt install openjdk-8-jre-headless`
-6. Clone `training_utils`
+    - 1.8.0_351 Version
+8. Clone `training_utils`
     - `git clone https://github.com/mrperson2015/training_utils.git`
-7. Clone `spark_training`
+9. Clone `spark_training`
     - `git clone https://github.com/mrperson2015/spark_training.git`
-8. Open project `spark_training` in PyCharm<br>
-   [<img src="./assets/setup/ubuntu/base_spark_job_main.png" width="300" />](./assets/setup/ubuntu/base_spark_job_main.png)
-    1. Setup interpreter
-    2. Add user interpreter to `training_utils`<br>
-       [<img src="./assets/setup/ubuntu/setup_interpreter.png" width="300" />](./assets/setup/ubuntu/setup_interpreter.png)
-    3. Install required packages<br>
-       [<img src="./assets/setup/ubuntu/package_requirements.png" width="300" />](./assets/setup/ubuntu/package_requirements.png)
-    4. Run `base_spark_job/main.py`<br>
-       [<img src="./assets/setup/ubuntu/job_complete.png" width="300" />](./assets/setup/ubuntu/job_complete.png)
+10. Open project `spark_training` in PyCharm<br>
+    [<img src="./assets/setup/ubuntu/base_spark_job_main.png" width="300" />](./assets/setup/ubuntu/base_spark_job_main.png)
+     1. Setup interpreter
+     2. Add user interpreter to `training_utils`<br>
+        [<img src="./assets/setup/ubuntu/setup_interpreter.png" width="300" />](./assets/setup/ubuntu/setup_interpreter.png)
+     3. Install required packages<br>
+        [<img src="./assets/setup/ubuntu/package_requirements.png" width="300" />](./assets/setup/ubuntu/package_requirements.png)
+     4. Run `base_spark_job/main.py`<br>
+        [<img src="./assets/setup/ubuntu/job_complete.png" width="300" />](./assets/setup/ubuntu/job_complete.png)
 
 </details>
