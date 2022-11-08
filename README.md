@@ -10,14 +10,6 @@
 
 [[_TOC_]]
 
-```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
-
 ## Purpose
 
 This is the top-level directory for PySpark Training. This is to help new hires and current developers alike to
@@ -44,6 +36,7 @@ by 📷-Cameron Larson and reviewed by 🍞-Brad Transtrum and 🧢-Bill Larkin.
 ---
 
 ## Setup
+
 Setup instructions have been moved to another markdown file. You can find it here [SETUP.md](./SETUP.md)
 
 ## Topics Covered
