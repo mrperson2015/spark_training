@@ -33,37 +33,38 @@ General steps follow this pattern:
 
 1. Install Windows 11
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
-    1. Install PyCharm 2022.2 (latest) via toolbox<br>
+    1. Install [PyCharm](https://www.jetbrains.com/pycharm/) 2022.2 via toolbox<br>
        [<img src="./assets/setup/win/jetbrains_toolkit.png" width="300" />](./assets/setup/win/jetbrains_toolkit.png)
-3. Install Git
+3. Install [Git](https://git-scm.com/)
     - [Git Downloads](https://git-scm.com/downloads)
-4. Install Python 3
+4. Install [Python](https://www.python.org/) 3
     - [Python Downloads](https://www.python.org/downloads/release/python-380/)
     - Install to `C:\Python\Python38\ `
     - Add to `PATH`
-5. Install JDK 8
+5. Install [JDK](https://www.oracle.com/java/) 8
     - [OpenJDK 8](https://www.oracle.com/java/technologies/downloads/#java8-windows)
     - Install JDK to `C:\Java\jdk1.8.0_351\ `
     - Install JRE to `C:\Java\jre\ `
 6. Install WinUtils
     - [WinUtils](https://github.com/cdarlint/winutils)
-    - Save winutils.exe to `C:\hadoop\bin\ `
+    - Save `winutils.exe` to `C:\hadoop\bin\ `
     - Add `HADOOP_HOME` environment variable with path `C:\hadoop\ `
     - Add `%HADOOP_HOME%\bin` to `PATH`
 7. Install hadoop.dll
 
-   I have never had to do this in my other installs. Maybe this is because I usually install PySpark locally instead
+   - [ ] Verify if needed - I have never had to do this in my other installs. Maybe this is because I usually install PySpark locally instead
    of using pip.
     - [WinUtils](https://github.com/cdarlint/winutils)
     - Copy `hadoop.dll`, from the same location as `winutils.exe`, to `C:\Windows\System32\ `
 8. Install Visual C++
-   I am not sure if this is needed. I ran into write parquet errors and this was one suggested fix.
+
+    - [ ] Verify if needed - I am not sure if this is needed. I ran into write parquet errors and this was one suggested fix.
     - x86 & x64 [Microsoft Visual C++](https://www.microsoft.com/en-au/download/details.aspx?id=26999)
-9. Clone `training_utils`
+10. Clone `training_utils`
     - `git clone https://github.com/mrperson2015/training_utils.git`
-10. Clone `spark_training`
+11. Clone `spark_training`
     - `git clone https://github.com/mrperson2015/spark_training.git`
-11. Open project `spark_training` in PyCharm<br>
+12. Open project `spark_training` in PyCharm<br>
     [<img src="./assets/setup/win/base_spark_job_main.png" width="300" />](./assets/setup/win/base_spark_job_main.png)
     1. Setup Interpreter
     2. Add user interpreter `training_utils`
@@ -76,14 +77,14 @@ General steps follow this pattern:
 
 ## Ubuntu
 
-1. Install Ubuntu 20.04.5 LTS
+1. Install [Ubuntu](https://ubuntu.com/) 20.04.5 LTS
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
-    1. Install PyCharm 2022.2 (latest) via toolbox
-3. Install Git
+    1. Install [PyCharm](https://www.jetbrains.com/pycharm/) 2022.2 via toolbox
+3. Install [Git](https://git-scm.com/)
     - `sudo apt install git`
-4. Install Pip
+4. Install [Pip](https://pip.pypa.io/en/stable/)
     - `sudo apt install python3-pip`
-5. Install JDK 8
+5. Install [JDK](https://www.oracle.com/java/) 8
     - `sudo apt install openjdk-8-jre-headless`
 6. Clone `training_utils`
     - `git clone https://github.com/mrperson2015/training_utils.git`
