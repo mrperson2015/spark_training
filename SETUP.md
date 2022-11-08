@@ -10,6 +10,12 @@
 | randomCoordinates | 0.1.7                             |
 | Faker             | 15.1.1, 15.1.2                    |
 
+# Assumptions
+
+It is assumed that the user of these instructions has some knowledge of Spark/PySpark, Python, Python Packages, Python
+Interpreters, PyCharm, and Java. This setup guide is a summary of steps needed to be taken rather than a comprehensive
+step-by-step guide.
+
 # Install & Configure
 
 These projects will largely run the same in Windows and Ubuntu once you have the OS dependencies installed and
