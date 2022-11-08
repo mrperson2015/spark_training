@@ -1,14 +1,14 @@
 # Tested Versions
 
-| Key               | Value                        |
-|-------------------|------------------------------|
-| OS                | Win 10, Win 11, Ubuntu 20.04 |
-| IDE               | PyCharm 2022.1, 2022.2       |
-| Python            | 3.8, 3.10                    |
-| JDK               | openJDK 1.8.0-262            |
-| PySpark           | 3.0.2, 3.0.3, 3.2.2          |
-| randomCoordinates | 0.1.7                        |
-| Faker             | 15.1.1, 15.1.2               |
+| Key               | Value                             |
+|-------------------|-----------------------------------|
+| OS                | Win 10, Win 11, Ubuntu 20.04      |
+| IDE               | PyCharm 2022.1, 2022.2            |
+| Python            | 3.8, 3.10                         |
+| JDK               | openJDK 1.8.0-262, Java 1.8.0_351 |
+| PySpark           | 3.0.2, 3.0.3, 3.2.2               |
+| randomCoordinates | 0.1.7                             |
+| Faker             | 15.1.1, 15.1.2                    |
 
 ```shell
 C:\source>java -version
@@ -62,21 +62,45 @@ C:\source>cd spark_training
 
 ### Windows
 
-1. Open project `spark_training` in PyCharm<br>
-   [<img src="./assets/setup/win/open_job.png" width="300" />](./assets/setup/win/open_job.png)
-2. Setup `venv`
-    1. Include user added interpreter to the
-       project [training_utils](https://github.com/mrperson2015/training_utils)<br>
-       [<img src="./assets/setup/win/setup_venv.png" width="300" />](./assets/setup/win/setup_venv.png)
-3. Install Dependencies<br>
-   See versions above if you want to follow the same versions used during development
+These steps where completed in a virtual machine using VMWare
 
-    1. `training_utils`
-    2. PySpark
-    3. randomCoordinates
-    4. Faker
+1. Install Windows 11
+2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
+    1. Install PyCharm 2022.2 (latest) via toolbox
+3. Install Git
+    - [Git Downloads](https://git-scm.com/downloads)
+4. Install Python 3
+    - [Python Downloads](https://www.python.org/downloads/release/python-380/)
+    - Installed to C:\Python\Python38\
+    - Added to PATH
+5. Install JDK 8
+    - [OpenJDK 8](https://www.oracle.com/java/technologies/downloads/#java8-windows)
+    - Installed JDK to `C:\Java\jdk1.8.0_351\`
+    - Installed JRE to `C:\Java\jre\`
+6. Install WinUtils
+    - [WinUtils](https://github.com/cdarlint/winutils)
+    - Save winutils.exe to `C:\hadoop\bin\`
+    - Add `HADOOP_HOME` environment variable with path `C:\hadoop\`
+    - Add `%HADOOP_HOME%\bin` to PATH
+7. Install hadoop.dll
+   I have never had to do this in my other installs. Maybe this is because I usually install PySpark locally instead
+   of using pip.
+    - [WinUtils](https://github.com/cdarlint/winutils)
+    - Copy `hadoop.dll`, from the same location as winutils, to `C:\Windows\System32`
+8. Install Visual C++
+   I am not sure if this is needed. I ran into write parquet errors and this was one suggested fix.
+    - x86 & x64 [Microsoft Visual C++](https://www.microsoft.com/en-au/download/details.aspx?id=26999)
+9. Open project `spark_training` in PyCharm<br>
+   [<img src="./assets/setup/win/open_job.png" width="300" />](./assets/setup/win/open_job.png)
+    1. Setup Interpreter
+    2. Add user interpreter `training_utils`
+       [training_utils](https://github.com/mrperson2015/training_utils)<br>
+       [<img src="./assets/setup/win/setup_venv.png" width="300" />](./assets/setup/win/setup_venv.png)
+    3. Install required packages
+    4. Run `base_spark_job/main.py`
 
 ### Ubuntu
+
 These steps where completed in a virtual machine using VMWare
 
 1. Install Ubuntu 22.04
@@ -92,12 +116,12 @@ These steps where completed in a virtual machine using VMWare
     - `git clone https://github.com/mrperson2015/training_utils.git`
 7. Clone `spark_training`
     - `git clone https://github.com/mrperson2015/spark_training.git`
-8. Open `spark_training` project<br>
+8. Open project `spark_training` in PyCharm<br>
    [<img src="./assets/setup/ubuntu/base_spark_job_main.png" width="300" />](./assets/setup/ubuntu/base_spark_job_main.png)
     1. Setup interpreter
-    2. add user interpreter to `training_utils`<br>
+    2. Add user interpreter to `training_utils`<br>
        [<img src="./assets/setup/ubuntu/setup_interpreter.png" width="300" />](./assets/setup/ubuntu/setup_interpreter.png)
-    3. install required packages<br>
+    3. Install required packages<br>
        [<img src="./assets/setup/ubuntu/package_requirements.png" width="300" />](./assets/setup/ubuntu/package_requirements.png)
-    4. run `base_spark_job/main.py`<br>
+    4. Run `base_spark_job/main.py`<br>
        [<img src="./assets/setup/ubuntu/job_complete.png" width="300" />](./assets/setup/ubuntu/job_complete.png)
