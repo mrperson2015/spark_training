@@ -40,15 +40,15 @@
 ┌───────────────────┬─────────────────────────────────┬───────────────────────────┐
 │ Architecture      │ Planning                        │ Implementation            │
 │───────────────────│─────────────────────────────────│───────────────────────────│
-│ [■] KISS          │ [ ] User Storie(s)              │ [■] Documentation         │
+│ [ ] KISS          │ [ ] User Storie(s)              │ [ ] Documentation         │
 │ [ ] Peer Review   │ [ ] Task(s) Have Time Estimates │   [ ] README.md           │
-│ [ ] Documentation │ [ ] Peer Review                 │   [■] Docstrings          │
-│ [ ] Lucid Chart   │ [ ] ¹Delivery Date              │   [■] Code                │
-│ [ ] Wiki          │ [ ] Test Plan                   │   [■] Handlers            │
-│                   │ [ ] Deploy Plan                 │ [■] No IDE Warnings       │
-│                   │ [ ] Support Plan                │ [■] No IDE Errors         │
-│                   │                                 │ [■] ²No Job Warnings      │
-│                   │                                 │ [■] No Job Errors         │
+│ [ ] Documentation │ [ ] Peer Review                 │   [ ] Docstrings          │
+│ [ ] Lucid Chart   │ [ ] ¹Delivery Date              │   [ ] Code                │
+│ [ ] Wiki          │ [ ] Test Plan                   │   [ ] Handlers            │
+│                   │ [ ] Deploy Plan                 │ [ ] No IDE Warnings       │
+│                   │ [ ] Support Plan                │ [ ] No IDE Errors         │
+│                   │                                 │ [ ] ²No Job Warnings      │
+│                   │                                 │ [ ] No Job Errors         │
 │                   │                                 │ [ ] Peer Review           │
 │                   │                                 │ [ ] Audits                │
 │                   │                                 │   [ ] Minimum             │
