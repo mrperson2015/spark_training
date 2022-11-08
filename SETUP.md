@@ -19,7 +19,7 @@ been included below.
 The steps below were generated from new a new virtual machine for Windows 11 and Ubuntu 20 using VMware Workstation.
 General steps follow this pattern:
 
-1. Install OS (Windows, Ubuntu)
+1. Install OS ([Windows](#Windows), [Ubuntu](#Ubuntu))
 2. Install JetBrains PyCharm - The IDE to run the code in
 3. Install Git - The version control tool of choice
 4. Install Python 3 - The language the PySpark jobs are written in
@@ -30,8 +30,6 @@ General steps follow this pattern:
 9. Run PySpark job
 
 ## Windows
-
-These steps where completed in a virtual machine using VMWare Workstation
 
 1. Install Windows 11
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
@@ -73,8 +71,6 @@ These steps where completed in a virtual machine using VMWare Workstation
     4. Run `base_spark_job/main.py`
 
 ## Ubuntu
-
-These steps where completed in a virtual machine using VMWare Workstation
 
 1. Install Ubuntu 20.04.5 LTS
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
