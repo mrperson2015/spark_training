@@ -10,59 +10,28 @@
 | randomCoordinates | 0.1.7                             |
 | Faker             | 15.1.1, 15.1.2                    |
 
-```shell
-C:\source>java -version
-openjdk version "1.8.0-262"
-OpenJDK Runtime Environment (build 1.8.0-262-b10)
-OpenJDK 64-Bit Server VM (build 25.71-b10, mixed mode)
-```
+# Install & Configure
 
-# Training Utils
+These projects will largely run the same in Windows and Ubuntu once you have the OS dependencies installed and
+configured. More system dependencies exist in the Windows OS making it longer to get up and running. These steps have
+been included below.
 
-## Clone Repo
+The steps below were generated from new a new virtual machine for Windows 11 and Ubuntu 20 using VMware Workstation.
+General steps follow this pattern:
 
-You are here -> [training_utils](https://github.com/mrperson2015/training_utils)
+1. Install OS (Windows, Ubuntu)
+2. Install JetBrains PyCharm - The IDE to run the code in
+3. Install Git - The version control tool of choice
+4. Install Python 3 - The language the PySpark jobs are written in
+5. Install JDK - The engine that Spark runs in
+6. Install OS specific items
+7. Clone repositories for `training_utils` and `spark_training` - The two projects used in this PySpark training project
+8. Open and configure `spark_training` job in PyCharm - Setup PyCharm with the required Python packages
+9. Run PySpark job
 
-```shell
-C:\source>git clone https://github.com/mrperson2015/training_utils.git
-Cloning into 'training_utils'...
-remote: Enumerating objects: 21, done.
-remote: Counting objects: 100% (21/21), done.
-remote: Compressing objects: 100% (13/13), done.
-Receiving objects:  76% (16/21)sed 20 (delta 4), pack-reused 0
-Receiving objects: 100% (21/21), 13.58 KiB | 3.40 MiB/s, done.
-Resolving deltas: 100% (5/5), done.
+## Windows
 
-C:\source>
-```
-
-# Spark Training
-
-## Clone Repo
-
-This project has a dependency to the project `training_utils` found
-at [training_utils](https://github.com/mrperson2015/training_utils)
-
-You are here -> [spark_training](https://github.com/mrperson2015/spark_training.git)
-
-```shell
-C:\source>git clone https://github.com/mrperson2015/spark_training.git
-Cloning into 'spark_training'...
-remote: Enumerating objects: 124, done.
-remote: Counting objects: 100% (124/124), done.
-remote: Compressing objects: 100% (81/81), done.
-remote: Total 124 (delta 64), reused 101 (delta 41), pack-reused 0Receiving objects:  56% (70/124)
-Receiving objects: 100% (124/124), 29.78 KiB | 376.00 KiB/s, done.
-Resolving deltas: 100% (64/64), done.
-
-C:\source>cd spark_training
-```
-
-## Setup
-
-### Windows
-
-These steps where completed in a virtual machine using VMWare
+These steps where completed in a virtual machine using VMWare Workstation
 
 1. Install Windows 11
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
@@ -75,23 +44,27 @@ These steps where completed in a virtual machine using VMWare
     - Added to PATH
 5. Install JDK 8
     - [OpenJDK 8](https://www.oracle.com/java/technologies/downloads/#java8-windows)
-    - Installed JDK to `C:\Java\jdk1.8.0_351\`
-    - Installed JRE to `C:\Java\jre\`
+    - Installed JDK to `C:\Java\jdk1.8.0_351\ `
+    - Installed JRE to `C:\Java\jre\ `
 6. Install WinUtils
     - [WinUtils](https://github.com/cdarlint/winutils)
-    - Save winutils.exe to `C:\hadoop\bin\`
-    - Add `HADOOP_HOME` environment variable with path `C:\hadoop\`
+    - Save winutils.exe to `C:\hadoop\bin\ `
+    - Add `HADOOP_HOME` environment variable with path `C:\hadoop\ `
     - Add `%HADOOP_HOME%\bin` to PATH
 7. Install hadoop.dll
    I have never had to do this in my other installs. Maybe this is because I usually install PySpark locally instead
    of using pip.
     - [WinUtils](https://github.com/cdarlint/winutils)
-    - Copy `hadoop.dll`, from the same location as winutils, to `C:\Windows\System32`
+    - Copy `hadoop.dll`, from the same location as winutils, to `C:\Windows\System32\ `
 8. Install Visual C++
    I am not sure if this is needed. I ran into write parquet errors and this was one suggested fix.
     - x86 & x64 [Microsoft Visual C++](https://www.microsoft.com/en-au/download/details.aspx?id=26999)
-9. Open project `spark_training` in PyCharm<br>
-   [<img src="./assets/setup/win/open_job.png" width="300" />](./assets/setup/win/open_job.png)
+9. Clone `training_utils`
+    - `git clone https://github.com/mrperson2015/training_utils.git`
+10. Clone `spark_training`
+    - `git clone https://github.com/mrperson2015/spark_training.git`
+11. Open project `spark_training` in PyCharm<br>
+    [<img src="./assets/setup/win/open_job.png" width="300" />](./assets/setup/win/open_job.png)
     1. Setup Interpreter
     2. Add user interpreter `training_utils`
        [training_utils](https://github.com/mrperson2015/training_utils)<br>
@@ -99,11 +72,11 @@ These steps where completed in a virtual machine using VMWare
     3. Install required packages
     4. Run `base_spark_job/main.py`
 
-### Ubuntu
+## Ubuntu
 
-These steps where completed in a virtual machine using VMWare
+These steps where completed in a virtual machine using VMWare Workstation
 
-1. Install Ubuntu 22.04
+1. Install Ubuntu 20.04.5 LTS
 2. Install [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
     1. Install PyCharm 2022.2 (latest) via toolbox
 3. Install Git
