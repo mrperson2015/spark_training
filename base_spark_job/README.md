@@ -86,8 +86,8 @@ you to understand the specific code and purpose of each topic.
 
 ### Related Docs
 
-[Console Job Output](CONSOLE.md)
-[Job Mistakes](MISTAKES.md)
+* [Console Job Output](CONSOLE.md)
+* [Job Mistakes](MISTAKES.md)
 
 ---
 
