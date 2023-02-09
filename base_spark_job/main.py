@@ -52,7 +52,7 @@ if __name__ == '__main__':
     print_header("LOAD PHASE")
     # Load Phase
     #  - Load/Write the data to the final destination
-    job_load_phase(dataframe=process_df, output_path="tests/output/base_spark_job")
+    job_load_phase(dataframe=process_df, output_path="tests/output/data/base_spark_job")
 
     # Print Job Run Info
     job_post_run_info(start_time=job_start_time)
