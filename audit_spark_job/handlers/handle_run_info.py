@@ -33,7 +33,7 @@ def job_pre_run_info(start_time: datetime.datetime, spark_session: SparkSession)
     return None
 
 
-def job_post_run_info(start_time: datetime.datetime, audit_result) -> None:
+def job_post_run_info(start_time: datetime.datetime) -> None:
     """
     Prints out helpful PySpark job info. This is intended for the end of your PySpark job.
 

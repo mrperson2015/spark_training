@@ -43,7 +43,7 @@ def job_transform_phase(dataframe: DataFrame):
     #      change type
     #   2. Speeds up the process as the DF doesn't need to regenerate
     change_type_df.show(truncate=False)
-    # AUDIT
+    # COLLECT INPUT AUDIT VALUES
     audit_change_type_df = change_type_df \
         .select(F.col("random_change_type"),
                 F.when(F.lower(F.col("random_change_type")) == F.lit("delete"), F.lit(1))

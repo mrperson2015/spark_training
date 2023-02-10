@@ -1,5 +1,5 @@
 """
-    This module handles the output for this training spark job.
+    This module handles the audits for this training spark job.
 """
 
 # Standard Library Imports <- This is not required but useful to separate out imports
@@ -9,20 +9,24 @@ from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
 
 
-def job_audit_phase(spark_session: SparkSession, output_path: str, audit_output_path: str) -> tuple[bool, str]:
+def job_audit_phase(spark_session: SparkSession, output_path: str, audit_output_path: str):
     """
-    Writes the audit data for this training job to the final destination.
+    Collects output audit values. Perform audits to verify the job is handling the data as required in the project
+    requirements. Populates the audit result data. Writes the audit data for this training job to the final
+    destination.
 
     Examples:
-        job_audit_phase(spark_session=spark, output_path="tests/output/data/audit_spark_job")
+        job_audit_phase(spark_session=spark,
+                         output_path="tests/output/data/audit_spark_job",
+                         audit_output_path="tests/output/log/audit/audit_spark_job")
 
     Args:
         spark_session (SparkSession): Spark context to read the output with
         output_path (str): Where to the data for this job was written to in the load phase
-        output_path (str): Where to write the audit data to
+        audit_output_path (str): Where to write the audit data to
 
     Returns:
-        tuple[bool, str]
+        Void
     """
     print_header("AUDIT 1 of 1\n"
                  "\n"
@@ -60,7 +64,8 @@ def job_audit_phase(spark_session: SparkSession, output_path: str, audit_output_
              F.sum(F.col("no_change")).alias("no_change_count"))
     audit.output.populate_from_df(audit_output_df)
 
-    # PERFORM AUDIT CHECKS
+    # PERFORM AUDITS
+    # TODO: do we hant to handle this here or add the functionality to helper_audit?
     _audits = {}
 
     audit_input_record_count = audit.input.get_record_count_value() == (

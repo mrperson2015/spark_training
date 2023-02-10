@@ -33,7 +33,7 @@ def job_extract_phase(spark_session: SparkSession, rows: int) -> DataFrame:
     _input_df = sdg.transaction_df(spark_session=spark_session, record_count=rows)
     _input_df.printSchema()
     _input_df.show(truncate=False)
-    # AUDIT
+    # COLLECT INPUT AUDIT VALUES
     audit_input_df = _input_df \
         .agg(F.count("id").alias("record_count"),
              F.sum("amount").alias("amount_sum"),

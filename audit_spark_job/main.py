@@ -20,15 +20,15 @@ if __name__ == '__main__':
     print_header(
         "├ Topics                            ├ Code Complete Criteria            \n"
         "┼───────────────────────────────────┼───────────────────────────────────\n"
-        "│[■] Audits                         │[ ] Documentation                  \n"
-        "│    [■] Minimum                    │    [ ] README.md                  \n"
-        "│    [■] Job Specific               │    [ ] Docstrings                 \n"
-        "│[ ] Logging                        │    [ ] Code                       \n"
-        "│[ ] Unit Tests                     │    [ ] Handlers                   \n"
-        "│[ ] Self-Healing                   │[ ] No ide Warnings                \n"
-        "│[ ] Single Execution               │[ ] No ide Errors                  \n"
-        "│                                   │[ ] ¹No Job Warnings               \n"
-        "│                                   │[ ] No Job Errors                  \n"
+        "│[■] Audits                         │[■] Documentation                  \n"
+        "│    [■] Minimum                    │    [■] README.md                  \n"
+        "│    [■] Job Specific               │    [■] Docstrings                 \n"
+        "│[ ] Logging                        │    [■] Code                       \n"
+        "│[ ] Unit Tests                     │    [■] Handlers                   \n"
+        "│[ ] Self-Healing                   │[■] No ide Warnings                \n"
+        "│[ ] Single Execution               │[■] No ide Errors                  \n"
+        "│                                   │[■] ¹No Job Warnings               \n"
+        "│                                   │[■] No Job Errors                  \n"
         "¹ except accepted standard warnings. ie 'Setting default log level to \"WARN\".'"
     )
 
@@ -60,12 +60,9 @@ if __name__ == '__main__':
 
     print_header("AUDIT PHASE")
     #  - Audit the data to verify the job is processing/handling all records correctly
-    #  - Every record is accounted for
-    #  - Amount is accounted for
-    #  - Total Percent of Total is accurate
     audit_result = job_audit_phase(spark_session=spark,
                                    output_path="tests/output/data/audit_spark_job",
                                    audit_output_path="tests/output/log/audit/audit_spark_job")
 
     # Print Job Run Info
-    job_post_run_info(start_time=job_start_time, audit_result=audit_result)
+    job_post_run_info(start_time=job_start_time)
