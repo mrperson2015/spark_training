@@ -23,8 +23,8 @@ C:\Source\spark_training\venv\Scripts\python.exe C:/Source/spark_training/audit_
 ║ │[ ] Unit Tests                     │    [ ] Handlers                                                        ║
 ║ │[ ] Self-Healing                   │[ ] No ide Warnings                                                     ║
 ║ │[ ] Single Execution               │[ ] No ide Errors                                                       ║
-║ │                                   │[■] ¹No Job Warnings                                                    ║
-║ │                                   │[■] No Job Errors                                                       ║
+║ │                                   │[ ] ¹No Job Warnings                                                    ║
+║ │                                   │[ ] No Job Errors                                                       ║
 ║ ¹ except accepted standard warnings. ie 'Setting default log level to "WARN".'                               ║
 ╚══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
