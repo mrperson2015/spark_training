@@ -24,9 +24,10 @@ project root
   2. Calculate Percent of Total for each record where record change is new, update, or delete
   3. Exclude no_change record types from the output
 * **Audit Spark Job**
-  1. Every record is accounted for
-  2. Amount is accounted for
-  3. Total Percent of Total is accurate
+  1. Base Spark Job Requirements Met
+  2. Every record is accounted for
+  3. Amount is accounted for
+  4. Total Percent of Total is accurate
 
 ### Steps
 
