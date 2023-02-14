@@ -5,7 +5,7 @@ project root
 │   └── CONSOLE.md ◄
 ├── logging_spark_job
 ├── unit_test_spark_job
-├── self_head_spark_job
+├── self_heal_spark_job
 └── single_execution_spark_job
 ```
 
