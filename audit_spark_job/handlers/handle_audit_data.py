@@ -80,13 +80,13 @@ def job_audit_phase(spark_session: SparkSession, output_path: str, audit_output_
             audit.output.get_update_count_audit_value() +
             audit.output.get_insert_count_audit_value() +
             audit.input.get_no_change_count_audit_value())
-    _audits.update({"Check Output Record Counts Match Input Record Count": audit_output_record_count})
+    _audits.update({"Check Output Record Counts Match `Input Record` Count": audit_output_record_count})
     # audit 3
     audit_output_pot = audit.output.get_audit_value(key="amount_percent_of_total_sum") == 1
     _audits.update({"Check Output Amount Percent Total Sum = 100%": audit_output_pot})
     # audit 4
     audit_output_no_change = audit.output.get_no_change_count_audit_value() == 0
-    _audits.update({"Check Output Has No Change Records": audit_output_no_change})
+    _audits.update({"Check Output Doesn't contain `No Change` Records": audit_output_no_change})
     # audit 5
     audit_updated_uppercase = audit.input.get_update_count_audit_value() == audit.output.get_update_count_audit_value()
     _audits.update({"Check Output Updated Records Are All Uppercase": audit_updated_uppercase})

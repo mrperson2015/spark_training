@@ -17,7 +17,7 @@ if __name__ == '__main__':
         "├ Topics                            ├ Code Complete Criteria            \n"
         "┼───────────────────────────────────┼───────────────────────────────────\n"
         "│[ ] Audits                         │[■] Documentation                  \n"
-        "│    [ ] Minimum                    │    [ ] README.md                  \n"
+        "│    [ ] Minimum                    │    [■] README.md                  \n"
         "│    [ ] Job Specific               │    [■] Docstrings                 \n"
         "│[ ] Logging                        │    [■] Code                       \n"
         "│[ ] Unit Tests                     │    [■] Handlers                   \n"
